@@ -120,4 +120,3 @@ res.render("all.ejs",{db,port});
  console.log("server working on port : "+port);
  });
 
-module.exports = app;
