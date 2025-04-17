@@ -116,8 +116,8 @@ res.render("all.ejs",{db,port});
 
 
 ////////////////////////////////////////////////////listening server
-// app.listen(port,()=>{
-// console.log("server working on port : "+port);
-// });
+ app.listen(port,()=>{
+ console.log("server working on port : "+port);
+ });
 
 module.exports = app;
