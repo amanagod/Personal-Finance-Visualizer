@@ -45,9 +45,9 @@
   
                   </div>
                 <div class="card-footer">
-                  <a class="btn btn-primary" style="display: inline-block;" href="http://localhost:<%=port%>/edit/<%=post.id%>" style="text-decoration: none; color: white;"> edit </a> </button>
-                  <form method="post" style="display: inline-block;" action="http://localhost:<%=port%>/delete/<%=post.id%>?_method=DELETE">
-                    <button class="btn btn-primary">deleat </button>
+                  <a class="btn btn-primary" style="display: inline-block;" href="/edit/<%=post.id%>" style="text-decoration: none; color: white;"> edit </a> </button>
+                  <form method="post" style="display: inline-block;" action="/delete/<%=post.id%>?_method=DELETE">
+                    <button class="btn btn-primary">delete </button>
                     </form> 
                 </div>
               </div>
