@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+</head>
+<body>
+    <div> <!-- new transaction -->
+        <div class="b-example-divider"></div>
+        <div> <!-- upload -->
+            <div class="b-example-divider"></div>
+            <div class="" >
+              <!-- style="width: 50rem; margin: 2rem 15rem" for line 101 -->
+             
+              <form action="/edit/<%=id%>"   method="post"  class="card rounded-3 shadow-sm shadow-lg bg-body-tertiary rounded px-5">
+                <h1 class="text-center pt-3">Add transaction </h1>
+                <h3 class="my-3">Amount</h3><input type="number" name="amount" id="" >
+                <h3 class="my-3">discription</h3> <textarea name="discription" id="" cols="30" rows="5"></textarea><br>
+            
+                 <h3 class="my-3">type</h3>
+                 <div class="form-floating">
+                    <select class="form-select" id="floatingSelect" name="category" aria-label="Floating label select example">
+                      <option selected value="other">other</option>
+                      <option value="food">food</option>
+                      <option value="travel">travel</option>
+                      <option value="rent">rent</option>
+                    </select>
+                    <label for="floatingSelect">category of expence</label>
+                  </div>
+                <button type="submit" class="btn btn-primary my-3">Submit</button>
+             
+              </form>
+            </div>
+          </div>
+    
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</body>
+</html>
