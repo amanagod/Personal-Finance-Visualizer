@@ -12,8 +12,6 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-const countmap = {};
-let other=0,rent=0,travel=0,food=0;
 let db 
 
 //////////////////////////////////////////////////////////////////////file handling
@@ -25,6 +23,20 @@ const success= (data)=>{
   // console.log(data);
    db = data;
 
+///////////////////////////////////////////////////////////////////////
+};
+const failure=(error)=>{
+  console.log(error);
+  };
+///////////////////reading
+file.read()
+.then(success)
+.catch(failure);
+///////////////////////////////////////////////////////// new data 
+
+app.get("/",(req,res)=>{
+const countmap = {};
+let other=0,rent=0,travel=0,food=0;
 //////////////////////////////////////////////////////hash maping
    for( let post of db){
     if(countmap[post.category]==undefined){
@@ -38,20 +50,9 @@ rent = countmap["rent"];
 travel = countmap["travel"];
 food = countmap["food"];
 
-// console.log(` food  ${food} rent ${rent} travel ${travel} other ${other}`);
-///////////////////////////////////////////////////////////////////////
-};
-const failure=(error)=>{
-  console.log(error);
-  };
-///////////////////reading
-file.read()
-.then(success)
-.catch(failure);
-///////////////////////////////////////////////////////// new data 
-
-app.get("/",(req,res)=>{
-res.render('index.ejs',{port,db,other,rent,travel,food});
+// console.log(` food  ${food} rent ${rent} travel ${travel} other ${other}`);  
+  
+  res.render('index.ejs',{port,db,other,rent,travel,food});
 });
 
 app.post("/",(req,res)=>{
